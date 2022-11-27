@@ -1,8 +1,6 @@
 import React from 'react'
 
-const LocationButtons = ({ state, changeLocation }) => {
-  const locations = ['01A', '99A', 'SHP', 'MC']
-
+const LocationButtons = ({ state, locations, changeLocation }) => {
   return (
     <section className='location-buttons-section'>
       <div className='location-buttons'>

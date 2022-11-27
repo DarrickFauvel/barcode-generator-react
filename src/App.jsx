@@ -14,6 +14,8 @@ function App() {
     subLocationNumber: 1
   })
 
+  const locations = ['01A', '99A', 'SHP', 'MC']
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setState((prevState) => ({
@@ -50,7 +52,11 @@ function App() {
     <div className='App'>
       <Header />
 
-      <LocationButtons state={state} changeLocation={changeLocation} />
+      <LocationButtons
+        state={state}
+        locations={locations}
+        changeLocation={changeLocation}
+      />
 
       <section className='sublocation'>
         <input
