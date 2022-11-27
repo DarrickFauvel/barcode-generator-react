@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+}
+
+.header {
+  & span {
+    position: relative;
+    display: inline-block;
+    color: red;
+    transform: scale(0.6);
+    top: 3px;
+    margin-inline: -0.35em;
+
+    &::before {
+      content: '🔴';
+      position: absolute;
+      top: 2px;
+      transform: scale(0.35);
+    }
+  }
+}
+
+.btn {
+  padding-inline: 0.75em;
+  padding-block: 0.5em;
+  border-radius: calc((5 / 16) * 1em);
+  border: none;
+  cursor: pointer;
+  background-color: rgb(182, 182, 182);
+}
+
+.parts {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  margin-block: 1em;
+}
+
+.part {
+  padding: 0.5em;
+  background-color: rgb(255, 228, 218);
+}
+
+.location-buttons {
+  display: flex;
+  gap: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
