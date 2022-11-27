@@ -11,18 +11,11 @@ body {
 .header {
   & span {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     color: red;
-    transform: scale(0.6);
+    transform: scale(1);
     top: 3px;
-    margin-inline: -0.35em;
-
-    &::before {
-      content: '🔴';
-      position: absolute;
-      top: 2px;
-      transform: scale(0.35);
-    }
+    margin-inline: -0.1;
   }
 }
 
@@ -55,4 +48,8 @@ body {
 form {
   display: flex;
   flex-direction: column;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 48;
 }
