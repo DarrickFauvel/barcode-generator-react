@@ -1,3 +1,7 @@
+:root {
+  --color-red: #e41b17;
+}
+
 *,
 *::before,
 *::after {
@@ -11,9 +15,7 @@ body {
 .header {
   & span {
     position: relative;
-    /* display: inline-block; */
-    color: red;
-    transform: scale(1);
+    color: var(--color-red);
     top: 3px;
     margin-inline: -0.1;
   }
