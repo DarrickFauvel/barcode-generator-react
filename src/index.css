@@ -2,10 +2,17 @@
   --color-red: #e41b17;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+body {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -48,6 +55,7 @@
 .location-buttons {
   display: flex;
   gap: 1em;
+  margin-bottom: 1em;
 }
 
 form {
