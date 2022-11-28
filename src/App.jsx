@@ -50,46 +50,42 @@ function App() {
 
   return (
     <div className='App'>
-      <Header />
-
-      <LocationButtons
-        state={state}
-        locations={locations}
-        changeLocation={changeLocation}
-      />
-
-      <section className='sublocation'>
-        <input
-          type='number'
-          name='subLocationNumber'
-          min='1'
-          max='999'
-          value={state.subLocationNumber}
-          onChange={handleChange}
+      <div className='wrapper'>
+        <Header />
+        <LocationButtons
+          state={state}
+          locations={locations}
+          changeLocation={changeLocation}
         />
-      </section>
-
-      <section className='parts'>
-        <div className='part'>{state.location ? state.location : '01A'}</div>
-        <div className='part'>{renderSubLocationNumber()}</div>
-      </section>
-
-      <form>
-        <label htmlFor='textInput'>Enter text</label>
-        <input
-          type='text'
-          id='textInput'
-          value={`${state.location} ${state.subLocation}`}
-          onChange={handleChange}
-        />
-        <button className='btn' type='submit'>
-          GENERATE
-        </button>
-      </form>
-
-      {/* {barcodeValue && <Barcode value={barcodeValue} />} */}
-
-      <Footer />
+        <section className='sublocation'>
+          <input
+            type='number'
+            name='subLocationNumber'
+            min='1'
+            max='999'
+            value={state.subLocationNumber}
+            onChange={handleChange}
+          />
+        </section>
+        <section className='parts'>
+          <div className='part'>{state.location ? state.location : '01A'}</div>
+          <div className='part'>{renderSubLocationNumber()}</div>
+        </section>
+        <form>
+          <label htmlFor='textInput'>Enter text</label>
+          <input
+            type='text'
+            id='textInput'
+            value={`${state.location} ${state.subLocation}`}
+            onChange={handleChange}
+          />
+          <button className='btn' type='submit'>
+            GENERATE
+          </button>
+        </form>
+        {/* {barcodeValue && <Barcode value={barcodeValue} />} */}
+        <Footer />
+      </div>
     </div>
   )
 }
