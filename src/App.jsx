@@ -52,11 +52,13 @@ function App() {
     <div className='App'>
       <div className='wrapper'>
         <Header />
+
         <LocationButtons
           state={state}
           locations={locations}
           changeLocation={changeLocation}
         />
+
         <section className='sublocation'>
           <input
             type='number'
@@ -67,10 +69,12 @@ function App() {
             onChange={handleChange}
           />
         </section>
+
         <section className='parts'>
           <div className='part'>{state.location ? state.location : '01A'}</div>
           <div className='part'>{renderSubLocationNumber()}</div>
         </section>
+
         <form>
           <label htmlFor='textInput'>Enter text</label>
           <input
@@ -83,7 +87,9 @@ function App() {
             GENERATE
           </button>
         </form>
+
         {/* {barcodeValue && <Barcode value={barcodeValue} />} */}
+
         <Footer />
       </div>
     </div>
