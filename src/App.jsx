@@ -27,38 +27,39 @@ function App() {
 
   return (
     <div className="App">
-      <div className="wrapper">
         <Header />
-
+      <div className="wrapper">
         <main className="main">
+          <div className="container">
+          
+          {/* <LocationButtons
+              state={state}
+              // locations={locations}
+              changeLocation={changeLocation}
+            /> */}
+          {/* <section className="sublocation">
+              <input
+                type="number"
+                name="subLocationNumber"
+                min="1"
+                max="999"
+                value={state.subLocationNumber}
+                onChange={handleChange}
+              />
+            </section> */}
+          {/* <section className="parts">
+              <div className="part">
+                {state.location ? state.location : "01A"}
+              </div>
+              <div className="part">{renderSubLocationNumber()}</div>
+            </section> */}
+          <Form />
 
-        {/* <LocationButtons
-            state={state}
-            // locations={locations}
-            changeLocation={changeLocation}
-          /> */}
-
-        {/* <section className="sublocation">
-            <input
-              type="number"
-              name="subLocationNumber"
-              min="1"
-              max="999"
-              value={state.subLocationNumber}
-              onChange={handleChange}
-            />
-          </section> */}
-
-        {/* <section className="parts">
-            <div className="part">
-              {state.location ? state.location : "01A"}
-            </div>
-            <div className="part">{renderSubLocationNumber()}</div>
-          </section> */}
-
-        <Form />
-
-        {state.barcodeValue && <Barcode value={state.barcodeValue} />}
+            <section className="barcode">
+          {state.barcodeValue && <Barcode value={state.barcodeValue} />}
+          </section>
+        </div>
+        {/* END container */}
 
         </main>
         
