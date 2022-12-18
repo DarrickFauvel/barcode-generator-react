@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { Context } from "../context";
 
 const Footer = () => {
-  return <div>Created by Darrick Fauvel.</div>
-}
+  const { state } = useContext(Context);
 
 export default Footer
