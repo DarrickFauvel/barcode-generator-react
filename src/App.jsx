@@ -1,99 +1,71 @@
-import { useState } from 'react'
+import { useContext } from "react";
+import { Context } from "./context";
 
-import Barcode from 'react-jsbarcode'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import LocationButtons from './components/LocationButtons'
+import Header from "./components/Header";
+import Form from "./components/Form";
+import Barcode from "./components/Barcode";
+import Footer from "./components/Footer";
+// import LocationButtons from "./components/LocationButtons";
 
 function App() {
-  const [state, setState] = useState({
-    inputText: '',
-    barcodeValue: '',
-    location: '',
-    subLocation: '',
-    subLocationNumber: 1
-  })
+  const { state } = useContext(Context);
 
-  const locations = ['01A', '99A', 'SHP', 'MC']
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setState((prevState) => ({
-      ...prevState,
-      [name]: value?.toUpperCase()
-    }))
-  }
+  // const changeLocation = (e) => {
+  //   const { name, textContent } = e.target;
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
+  //   setState((prevState) => ({ ...prevState, [name]: textContent }));
+  // };
 
-  //   const { name, value } = e.target
-  //   setState((prevState) => ({
-  //     ...prevState,
-  //     [name]: value
-  //   }))
-  // }
-
-  const changeLocation = (e) => {
-    const { name, textContent } = e.target
-
-    setState((prevState) => ({ ...prevState, [name]: textContent }))
-  }
-
-  const renderSubLocationNumber = () => {
-    if (state.subLocationNumber.length === 1) {
-      return '00' + state.subLocationNumber
-    } else if (state.subLocationNumber.length === 2) {
-      return '0' + state.subLocationNumber
-    }
-  }
+  // const renderSubLocationNumber = () => {
+  //   if (state.subLocationNumber.length === 1) {
+  //     return "00" + state.subLocationNumber;
+  //   } else if (state.subLocationNumber.length === 2) {
+  //     return "0" + state.subLocationNumber;
+  //   }
+  // };
 
   return (
-    <div className='App'>
-      <div className='wrapper'>
+    <div className="App">
+      <div className="wrapper">
         <Header />
 
-        <LocationButtons
-          state={state}
-          locations={locations}
-          changeLocation={changeLocation}
-        />
+        <main className="main">
 
-        <section className='sublocation'>
-          <input
-            type='number'
-            name='subLocationNumber'
-            min='1'
-            max='999'
-            value={state.subLocationNumber}
-            onChange={handleChange}
-          />
-        </section>
+        {/* <LocationButtons
+            state={state}
+            // locations={locations}
+            changeLocation={changeLocation}
+          /> */}
 
-        <section className='parts'>
-          <div className='part'>{state.location ? state.location : '01A'}</div>
-          <div className='part'>{renderSubLocationNumber()}</div>
-        </section>
+        {/* <section className="sublocation">
+            <input
+              type="number"
+              name="subLocationNumber"
+              min="1"
+              max="999"
+              value={state.subLocationNumber}
+              onChange={handleChange}
+            />
+          </section> */}
 
-        <form>
-          <label htmlFor='textInput'>Enter text</label>
-          <input
-            type='text'
-            id='textInput'
-            value={`${state.location} ${state.subLocation}`}
-            onChange={handleChange}
-          />
-          <button className='btn' type='submit'>
-            GENERATE
-          </button>
-        </form>
+        {/* <section className="parts">
+            <div className="part">
+              {state.location ? state.location : "01A"}
+            </div>
+            <div className="part">{renderSubLocationNumber()}</div>
+          </section> */}
 
-        {/* {barcodeValue && <Barcode value={barcodeValue} />} */}
+        <Form />
 
+        {state.barcodeValue && <Barcode value={state.barcodeValue} />}
+
+        </main>
+        
         <Footer />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
