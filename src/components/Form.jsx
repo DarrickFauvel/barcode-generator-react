@@ -25,7 +25,6 @@ const Form = () => {
   return (
     <form id="form" onSubmit={handleSubmit}>
       <div className="control-group">
-        <label htmlFor="textInput">example: 01A035M02</label>
         <input
           type="text"
           id="textInput"
@@ -35,6 +34,7 @@ const Form = () => {
           ref={inputRef}
           placeholder="Enter location identifier..."
         />
+        {/* <label htmlFor="textInput"><span>example:</span> 01A035M02</label> */}
       </div>
       <button className="btn" type="submit">
         GENERATE
