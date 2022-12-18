@@ -64,6 +64,19 @@ body {
 form {
   display: flex;
   flex-direction: column;
+  gap: 1em;
+}
+
+label {
+  display: block;
+  color: darkgray;
+  width: 100%;
+  text-align: right;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em;
 }
 
 .material-symbols-outlined {
