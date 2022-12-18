@@ -1,12 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { ContextProvider } from "./context";
+import App from "./App";
 
-import 'normalize.css'
-import './index.css'
+import "normalize.css";
+import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <ContextProvider>
+      <App />
+    </ContextProvider>
   </React.StrictMode>
-)
+);
