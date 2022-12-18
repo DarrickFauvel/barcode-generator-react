@@ -6,10 +6,11 @@ const Header = () => {
 
   return (
     <header className="header">
-      <h1>
-        myBarc<span className="material-symbols-outlined">adjust</span>de
-        Generator
-      </h1>
+      <div className="container">
+        <h1>
+          myBarc<span className="material-symbols-outlined">adjust</span>de
+        </h1>
+      </div>
     </header>
   );
 };
