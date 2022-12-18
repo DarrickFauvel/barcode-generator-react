@@ -21,7 +21,7 @@ body {
   grid-template-rows: auto 1fr 100px;
   height: 100vh;
   margin-inline: auto;
-  max-width: 960px;
+  max-width: 400px;
   padding-inline: 1em;
 }
 
