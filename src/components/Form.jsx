@@ -1,25 +1,18 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext } from "react";
 import { Context } from "../context";
 
 const Form = () => {
   const { state, setState, handleChange } = useContext(Context);
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!textInput) {
-      inputRef.current.focus();
       return;
     }
     setState((prevState) => ({
       ...prevState,
       barcodeValue: state.textInput,
     }));
-    inputRef.current.focus();
   };
 
   return (
@@ -31,10 +24,10 @@ const Form = () => {
           name="textInput"
           value={state.textInput}
           onChange={handleChange}
-          ref={inputRef}
           placeholder="Enter location identifier..."
+          autoComplete="off"
         />
-        {/* <label htmlFor="textInput"><span>example:</span> 01A035M02</label> */}
+        <label htmlFor="textInput"><span>example:</span> 01A035M02, 99B106A05, etc.</label>
       </div>
       <button className="btn" type="submit">
         GENERATE
