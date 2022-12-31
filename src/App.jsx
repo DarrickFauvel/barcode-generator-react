@@ -1,15 +1,18 @@
-import { useContext } from "react";
-import { Context } from "./context";
+import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Context } from './context';
 
-import Header from "./components/Header";
-import Form from "./components/Form";
-import Barcode from "./components/Barcode";
-import Footer from "./components/Footer";
+import Layout from './components/Layout';
+import Header from './components/Header';
+
+import Footer from './components/Footer';
+import Home from './components/Home';
+import BarcodeGenerator from './components/BarcodeGenerator';
+import GroceryCodes from './components/GroceryCodes'
 // import LocationButtons from "./components/LocationButtons";
 
 function App() {
   const { state } = useContext(Context);
-
 
   // const changeLocation = (e) => {
   //   const { name, textContent } = e.target;
@@ -26,45 +29,18 @@ function App() {
   // };
 
   return (
-    <div className="App">
-        <Header />
-      <div className="wrapper">
-        <main className="main">
-          <div className="container">
-          
-          {/* <LocationButtons
-              state={state}
-              // locations={locations}
-              changeLocation={changeLocation}
-            /> */}
-          {/* <section className="sublocation">
-              <input
-                type="number"
-                name="subLocationNumber"
-                min="1"
-                max="999"
-                value={state.subLocationNumber}
-                onChange={handleChange}
-              />
-            </section> */}
-          {/* <section className="parts">
-              <div className="part">
-                {state.location ? state.location : "01A"}
-              </div>
-              <div className="part">{renderSubLocationNumber()}</div>
-            </section> */}
-          <Form />
+    <div className='App'>
+      <Header />
 
-            <section className="barcode">
-          {state.barcodeValue && <Barcode value={state.barcodeValue} />}
-          </section>
-        </div>
-        {/* END container */}
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='generator' element={<BarcodeGenerator />} />
+          <Route path='grocery' element={<GroceryCodes />} />
+        </Route>
+      </Routes>
 
-        </main>
-        
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }
