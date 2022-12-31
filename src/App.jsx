@@ -8,7 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import BarcodeGenerator from './components/BarcodeGenerator';
-import GroceryCodes from './components/GroceryCodes'
+import GroceryCodes from './components/GroceryCodes';
 // import LocationButtons from "./components/LocationButtons";
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
         </Route>
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
