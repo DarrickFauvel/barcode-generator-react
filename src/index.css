@@ -278,13 +278,14 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
+  padding-bottom: 2em;
 }
 
 .card {
   border: 1px solid lightgray;
-  border-radius: .4rem;
-  padding-block: .5em;
-  padding-inline: .75em;
+  border-radius: 0.4rem;
+  padding-block: 0.5em;
+  padding-inline: 0.75em;
 }
 
 .card-title {
