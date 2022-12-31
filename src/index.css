@@ -118,6 +118,32 @@ input {
   margin-top: 1em;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.card {
+  border: 1px solid lightgray;
+  border-radius: .4rem;
+  padding-block: .5em;
+  padding-inline: .75em;
+}
+
+.card-title {
+  text-transform: capitalize;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+}
+
+.card-img {
+  max-width: 60px;
+}
+
 /* Footer */
 .footer__list {
   display: flex;
