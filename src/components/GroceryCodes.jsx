@@ -9,6 +9,7 @@ const GroceryCodes = () => {
   return (
     <>
       <h2>Grocery Codes</h2>
+
       <section className='cards'>
         {groceryCodes.map((item) => {
           return (
