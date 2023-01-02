@@ -2,14 +2,14 @@ import { useContext } from 'react';
 import { Context } from '../context';
 
 import Form from './Form';
-import Barcode from './Barcode';
+import BarcodeComponent from './BarcodeComponent';
 
 const BarcodeGenerator = () => {
   const { state } = useContext(Context);
 
   return (
     <>
-    <h2>Barcode Generator</h2>
+      <h2>Barcode Generator</h2>
       {/* <LocationButtons
         state={state}
         // locations={locations}
@@ -35,7 +35,7 @@ const BarcodeGenerator = () => {
       <Form />
 
       <section className='barcode'>
-        {state.barcodeValue && <Barcode value={state.barcodeValue} />}
+        {state.barcodeValue && <BarcodeComponent value={state.barcodeValue} />}
       </section>
     </>
   );
