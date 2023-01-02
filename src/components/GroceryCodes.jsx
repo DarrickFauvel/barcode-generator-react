@@ -20,7 +20,12 @@ const GroceryCodes = () => {
                   <img src={item.imgUrl} alt={item.name} />
                 </div>
                 <section className='barcode'>
-                  {item.upc && <BarcodeComponent barcodeValue={item.upc} />}
+                  {item.upc && (
+                    <BarcodeComponent
+                      barcodeValue={item.upc}
+                      dpci={item.dpci}
+                    />
+                  )}
                 </section>
               </div>
             </article>

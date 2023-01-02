@@ -11,7 +11,8 @@ const BarcodeComponent = (props) => {
   return (
     <Barcode
       value={props.barcodeValue || state.barcodeValue}
-      options={{ height: 50 }}
+      height={50}
+      text={props.dpci}
     />
   );
 };
