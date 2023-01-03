@@ -3,13 +3,14 @@ import { Context } from '../context';
 
 import Form from './Form';
 import BarcodeComponent from './BarcodeComponent';
+import PageTitle from './PageTitle';
 
 const BarcodeGenerator = () => {
   const { state } = useContext(Context);
 
   return (
     <>
-      <h2>Barcode Generator</h2>
+      <PageTitle title='Barcode Generator' />
       {/* <LocationButtons
         state={state}
         // locations={locations}
