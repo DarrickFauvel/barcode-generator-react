@@ -188,7 +188,7 @@ img {
   box-shadow: 0 1px 3px gray;
 
   & .navbrand > a {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: var(--color-white-100);
     text-decoration: none;
