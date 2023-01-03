@@ -220,7 +220,7 @@ img {
 
 /* Main */
 .main {
-  margin-top: calc((65 / 16) * 1em);
+  margin-top: calc((75 / 16) * 1em);
   margin-bottom: calc((50 / 16) * 1em);
 }
 
