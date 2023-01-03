@@ -13,6 +13,7 @@ const BarcodeComponent = (props) => {
       value={props.barcodeValue || state.barcodeValue}
       height={50}
       text={props.dpci}
+      fontSize={15}
     />
   );
 };
