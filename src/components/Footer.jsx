@@ -8,27 +8,9 @@ const Footer = () => {
     <footer className='footer'>
       <div className='container'>
         <p className='author'>Created by {state.author}.</p>
-
-        <ul className='footer__list'>
-          <li>
-            <a className='footer__link' href={state.urlWebsite} target='_blank'>
-              darrickdevelops.com
-            </a>
-          </li>
-          <li>
-            <a
-              className='footer__link'
-              href={state.urlLinkedIn}
-              target='_blank'>
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a className='footer__link' href={state.urlGitHub} target='_blank'>
-              GitHub
-            </a>
-          </li>
-        </ul>
+        <a className='footer__link' href={state.urlWebsite} target='_blank'>
+          darrickdevelops.com
+        </a>
       </div>
     </footer>
   );
