@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { Context } from '../context';
 
+import PageTitle from './PageTitle';
+
 import BarcodeComponent from './BarcodeComponent';
 
 const GroceryCodes = () => {
@@ -8,7 +10,7 @@ const GroceryCodes = () => {
 
   return (
     <>
-      <h2>Grocery Codes</h2>
+      <PageTitle title='Grocery Codes' />
 
       <section className='cards'>
         {groceryCodes.map((item) => {
