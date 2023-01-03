@@ -1,27 +1,30 @@
-import React, { useContext } from "react";
-import { Context } from "../context";
+import React, { useContext } from 'react';
+import { Context } from '../context';
 
 const Footer = () => {
   const { state } = useContext(Context);
 
   return (
-    <footer className="footer">
-      <div className="container">
-        <hr />
-        <p>Created by {state.author}.</p>
-        <ul className="footer__list">
+    <footer className='footer'>
+      <div className='container'>
+        <p className='author'>Created by {state.author}.</p>
+
+        <ul className='footer__list'>
           <li>
-            <a className="footer__link" href={state.urlWebsite} target="_blank">
-              darrickfauvel.com
+            <a className='footer__link' href={state.urlWebsite} target='_blank'>
+              darrickdevelops.com
             </a>
           </li>
           <li>
-            <a className="footer__link" href={state.urlLinkedIn} target="_blank">
+            <a
+              className='footer__link'
+              href={state.urlLinkedIn}
+              target='_blank'>
               LinkedIn
             </a>
           </li>
           <li>
-            <a className="footer__link" href={state.urlGitHub} target="_blank">
+            <a className='footer__link' href={state.urlGitHub} target='_blank'>
               GitHub
             </a>
           </li>

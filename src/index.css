@@ -99,7 +99,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   /* font-size: var(--_size); */
-  line-height: 1.5;
+  /* line-height: 1.5; */
   /* background-color: hsl(var(--bg)); */
   background-color: var(--color-white-100);
   /* color: hsl(var(--txt)); */
@@ -154,11 +154,11 @@ img {
   width: 100%;
 }
 
-.wrapper {
+/* .wrapper {
   display: grid;
   grid-template-rows: 1fr 100px;
   height: 100vh;
-}
+} */
 
 .container {
   max-width: 400px;
@@ -166,35 +166,61 @@ img {
   padding-inline: 1em;
 }
 
-.header {
+.header,
+.footer {
   background-color: var(--color-red-40);
   color: var(--color-white-100);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  & a {
+    color: whitesmoke;
+  }
+}
+
+/* Header */
+.header {
   margin-bottom: 1em;
   padding-block: 0.5em;
+  top: 0;
+  height: calc((50 / 16) * 1em);
+  box-shadow: 0 1px 3px gray;
 
-  & h1 {
+  & .navbrand > a {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-white-100);
+    text-decoration: none;
     margin: 0;
-  }
-
-  & span {
-    position: relative;
-    top: 3px;
-    margin-inline: -0.1;
+    padding: 0;
+    line-height: 0;
   }
 
   & ul {
     display: flex;
     gap: 1em;
-  }
 
-  & a {
-    color: whitesmoke;
-    text-decoration: none;
+    & a {
+      font-size: calc((12 / 16) * 1rem);
+      color: whitesmoke;
+      text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
+}
+
+/* Main */
+.main {
+  margin-top: calc((65 / 16) * 1em);
+  margin-bottom: calc((50 / 16) * 1em);
+}
+
+.page-title {
+  margin-bottom: 0.5em;
 }
 
 .btn {
@@ -271,7 +297,6 @@ input {
 
 .barcode {
   text-align: center;
-  margin-top: 1em;
 }
 
 .cards {
@@ -284,7 +309,7 @@ input {
 .card {
   border: 1px solid lightgray;
   border-radius: 0.4rem;
-  padding-block: 0.5em;
+  padding-block: 0.5em 0;
   padding-inline: 0.75em;
 }
 
@@ -295,6 +320,8 @@ input {
 .card-content {
   display: flex;
   align-items: center;
+  line-height: 0;
+  padding: 0;
 }
 
 .card-img {
@@ -302,6 +329,25 @@ input {
 }
 
 /* Footer */
+.footer {
+  bottom: 0;
+  height: calc((50 / 16) * 1em);
+  box-shadow: 0 -1px 3px gray;
+  line-height: 1.1;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.footer .author {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
 .footer__list {
   display: flex;
   gap: 1.5em;
@@ -311,5 +357,5 @@ input {
 
 .footer__link {
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
