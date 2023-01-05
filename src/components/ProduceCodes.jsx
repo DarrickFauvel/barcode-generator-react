@@ -5,15 +5,15 @@ import PageTitle from './PageTitle';
 
 import BarcodeComponent from './BarcodeComponent';
 
-const GroceryCodes = () => {
-  const { groceryCodes } = useContext(Context);
+const ProduceCodes = () => {
+  const { produceCodes } = useContext(Context);
 
   return (
     <>
-      <PageTitle title='Grocery Codes' />
+      <PageTitle title='Produce Codes' />
 
       <section className='cards'>
-        {groceryCodes.map((item) => {
+        {produceCodes.map((item) => {
           return (
             <article className='card' key={item.name}>
               <h3 className='card-title'>{item.name}</h3>
@@ -38,4 +38,4 @@ const GroceryCodes = () => {
   );
 };
 
-export default GroceryCodes;
+export default ProduceCodes;

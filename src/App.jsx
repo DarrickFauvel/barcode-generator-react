@@ -8,7 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import BarcodeGenerator from './components/BarcodeGenerator';
-import GroceryCodes from './components/GroceryCodes';
+import ProduceCodes from './components/ProduceCodes';
 // import LocationButtons from "./components/LocationButtons";
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='generator' element={<BarcodeGenerator />} />
-          <Route path='grocery' element={<GroceryCodes />} />
+          <Route path='produce' element={<ProduceCodes />} />
         </Route>
       </Routes>
 

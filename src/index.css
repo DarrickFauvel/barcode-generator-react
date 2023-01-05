@@ -220,12 +220,12 @@ img {
 
 /* Main */
 .main {
-  margin-top: calc((75 / 16) * 1em);
+  margin-top: calc((85 / 16) * 1em);
   margin-bottom: calc((50 / 16) * 1em);
 }
 
 .page-title {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.85em;
 }
 
 .btn {
@@ -312,7 +312,7 @@ input {
 }
 
 .card {
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
   border-radius: 0.4rem;
   padding-block: 0.5em 0;
   padding-inline: 0.75em;

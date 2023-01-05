@@ -18,7 +18,7 @@ const Header = () => {
               <Link to='generator'>barcode generator</Link>
             </li>
             <li>
-              <Link to='grocery'>grocery codes</Link>
+              <Link to='produce'>produce codes</Link>
             </li>
           </ul>
         </nav>
