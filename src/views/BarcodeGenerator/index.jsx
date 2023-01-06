@@ -3,7 +3,7 @@ import { Context } from '../../context'
 
 import PageTitle from '../../components/PageTitle'
 import Form from './components/Form'
-import BarcodeComponent from '../../components/Barcode'
+import Barcode from '../../components/Barcode'
 
 const BarcodeGenerator = () => {
   const { state } = useContext(Context)
@@ -15,7 +15,7 @@ const BarcodeGenerator = () => {
       <Form />
 
       <section className='barcode'>
-        {state.barcodeValue && <BarcodeComponent value={state.barcodeValue} />}
+        {state.barcodeValue && <Barcode value={state.barcodeValue} />}
       </section>
     </>
   )
