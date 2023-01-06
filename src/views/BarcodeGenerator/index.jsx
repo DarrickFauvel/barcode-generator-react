@@ -3,7 +3,7 @@ import { Context } from '../../context'
 
 import PageTitle from '../../components/PageTitle'
 import Form from './components/Form'
-import BarcodeComponent from './components/Barcode'
+import BarcodeComponent from '../../components/Barcode'
 
 const BarcodeGenerator = () => {
   const { state } = useContext(Context)

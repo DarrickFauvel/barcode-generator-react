@@ -1,4 +1,4 @@
-import Barcode from '../../BarcodeGenerator/components/Barcode'
+import Barcode from '../../../components/Barcode'
 
 const Card = ({ item }) => {
   return (
