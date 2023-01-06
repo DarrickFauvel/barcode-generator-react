@@ -2,8 +2,7 @@ import { useContext } from 'react'
 import { Context } from '../../context'
 
 import PageTitle from '../../components/PageTitle'
-
-import BarcodeComponent from '../BarcodeGenerator/components/Barcode'
+import Card from './components/Card'
 
 const ProduceCodes = () => {
   const { ProduceData } = useContext(Context)
@@ -13,26 +12,9 @@ const ProduceCodes = () => {
       <PageTitle title='Produce Codes' />
 
       <section className='cards'>
-        {ProduceData.map((item) => {
-          return (
-            <article className='card' key={item.name}>
-              <h3 className='card-title'>{item.name}</h3>
-              <div className='card-content'>
-                <div className='card-img'>
-                  <img src={item.imgUrl} alt={item.name} />
-                </div>
-                <section className='barcode'>
-                  {item.upc && (
-                    <BarcodeComponent
-                      barcodeValue={item.upc}
-                      dpci={item.dpci}
-                    />
-                  )}
-                </section>
-              </div>
-            </article>
-          )
-        })}
+        {ProduceData.map((item) => (
+          <Card item={item} key={item.upc} />
+        ))}
       </section>
     </>
   )
