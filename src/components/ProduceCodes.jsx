@@ -6,14 +6,14 @@ import PageTitle from './PageTitle'
 import BarcodeComponent from './BarcodeComponent'
 
 const ProduceCodes = () => {
-  const { produceCodes } = useContext(Context)
+  const { ProduceData } = useContext(Context)
 
   return (
     <>
       <PageTitle title='Produce Codes' />
 
       <section className='cards'>
-        {produceCodes.map((item) => {
+        {ProduceData.map((item) => {
           return (
             <article className='card' key={item.name}>
               <h3 className='card-title'>{item.name}</h3>
