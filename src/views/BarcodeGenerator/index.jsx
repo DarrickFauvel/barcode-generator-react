@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import { Context } from '../context'
+import { Context } from '../../context'
 
-import PageTitle from './PageTitle'
-import Form from './Form'
-import BarcodeComponent from './BarcodeComponent'
+import PageTitle from '../../components/PageTitle'
+import Form from './components/Form'
+import BarcodeComponent from './components/Barcode'
 
 const BarcodeGenerator = () => {
   const { state } = useContext(Context)

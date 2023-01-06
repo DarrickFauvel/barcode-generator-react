@@ -5,9 +5,9 @@ import { Context } from './context'
 import Layout from './components/Layout'
 import Header from './components/Header'
 
-import Home from './components/Home'
-import BarcodeGenerator from './components/BarcodeGenerator'
-import ProduceCodes from './components/ProduceCodes'
+import Home from './views/Home'
+import BarcodeGenerator from './views/BarcodeGenerator'
+import ProduceCodes from './views/ProduceCodes'
 import Footer from './components/Footer'
 
 function App() {

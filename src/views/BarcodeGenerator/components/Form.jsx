@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Context } from '../context'
+import { Context } from '../../../context'
 
 const Form = () => {
   const { state, setState, handleChange } = useContext(Context)

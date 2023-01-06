@@ -1,13 +1,13 @@
 import { useContext } from 'react'
-import { Context } from '../context'
+import { Context } from '../../../context'
 
-import Barcode from 'react-barcode'
+import ReactBarcode from 'react-barcode'
 
-const BarcodeComponent = (props) => {
+const Barcode = (props) => {
   const { state } = useContext(Context)
 
   return (
-    <Barcode
+    <ReactBarcode
       value={props.barcodeValue || state.barcodeValue}
       height={50}
       text={props.dpci}
@@ -16,4 +16,4 @@ const BarcodeComponent = (props) => {
   )
 }
 
-export default BarcodeComponent
+export default Barcode
