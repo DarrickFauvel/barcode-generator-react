@@ -1,6 +1,6 @@
-import { useState, createContext } from 'react';
+import { useState, createContext } from 'react'
 
-const Context = createContext();
+const Context = createContext()
 
 const ContextProvider = (props) => {
   const [state, setState] = useState({
@@ -14,7 +14,7 @@ const ContextProvider = (props) => {
     subLocationNumber: '',
     barcodeValue: '',
     locations: ['01A', '99A', 'SHP', 'MC']
-  });
+  })
 
   const produceCodes = [
     {
@@ -101,21 +101,21 @@ const ContextProvider = (props) => {
       imgUrl:
         'https://target.scene7.com/is/image/Target/GUEST_14ef7290-1621-47e0-8c52-1f604be1c022?wid=325&hei=325&qlt=80&fmt=pjpeg'
     }
-  ];
+  ]
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setState((prevState) => ({
       ...prevState,
       [name]: value?.toUpperCase()
-    }));
-  };
+    }))
+  }
 
   return (
     <Context.Provider value={{ state, setState, handleChange, produceCodes }}>
       {props.children}
     </Context.Provider>
-  );
-};
+  )
+}
 
-export { Context, ContextProvider };
+export { Context, ContextProvider }

@@ -1,13 +1,11 @@
-import { useContext } from 'react';
-import { Context } from '../context';
+import { useContext } from 'react'
+import { Context } from '../context'
 
-// import ReactJsBarcode from "react-jsbarcode";
-import Barcode from 'react-barcode';
+import Barcode from 'react-barcode'
 
 const BarcodeComponent = (props) => {
-  const { state } = useContext(Context);
+  const { state } = useContext(Context)
 
-  // return <ReactJsBarcode value={props.barcodeValue || state.barcodeValue} options={{ height: 50 }} />;
   return (
     <Barcode
       value={props.barcodeValue || state.barcodeValue}
@@ -15,7 +13,7 @@ const BarcodeComponent = (props) => {
       text={props.dpci}
       fontSize={15}
     />
-  );
-};
+  )
+}
 
-export default BarcodeComponent;
+export default BarcodeComponent

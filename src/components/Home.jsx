@@ -1,7 +1,5 @@
-import PageTitle from './PageTitle';
+import PageTitle from './PageTitle'
 
-const Home = () => {
-  return <PageTitle title='Home' />;
-};
+const Home = () => <PageTitle title='Home' />
 
-export default Home;
+export default Home

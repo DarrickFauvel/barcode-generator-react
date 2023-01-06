@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
   return (
@@ -8,7 +8,7 @@ const Layout = () => {
       </div>
       {/* END container */}
     </main>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

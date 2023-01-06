@@ -1,37 +1,16 @@
-import { useContext } from 'react';
-import { Context } from '../context';
+import { useContext } from 'react'
+import { Context } from '../context'
 
-import Form from './Form';
-import BarcodeComponent from './BarcodeComponent';
-import PageTitle from './PageTitle';
+import PageTitle from './PageTitle'
+import Form from './Form'
+import BarcodeComponent from './BarcodeComponent'
 
 const BarcodeGenerator = () => {
-  const { state } = useContext(Context);
+  const { state } = useContext(Context)
 
   return (
     <>
       <PageTitle title='Barcode Generator' />
-      {/* <LocationButtons
-        state={state}
-        // locations={locations}
-        changeLocation={changeLocation}
-      /> */}
-      {/* <section className="sublocation">
-        <input
-          type="number"
-          name="subLocationNumber"
-          min="1"
-          max="999"
-          value={state.subLocationNumber}
-          onChange={handleChange}
-        />
-      </section> */}
-      {/* <section className="parts">
-        <div className="part">
-          {state.location ? state.location : "01A"}
-        </div>
-        <div className="part">{renderSubLocationNumber()}</div>
-      </section> */}
 
       <Form />
 
@@ -39,7 +18,7 @@ const BarcodeGenerator = () => {
         {state.barcodeValue && <BarcodeComponent value={state.barcodeValue} />}
       </section>
     </>
-  );
-};
+  )
+}
 
-export default BarcodeGenerator;
+export default BarcodeGenerator

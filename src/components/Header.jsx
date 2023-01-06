@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { Context } from '../context';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { Context } from '../context'
 
 const Header = () => {
-  const { state } = useContext(Context);
+  const { state } = useContext(Context)
 
   return (
     <header className='header'>
@@ -24,7 +24,7 @@ const Header = () => {
         </nav>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

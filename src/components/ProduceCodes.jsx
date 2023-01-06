@@ -1,12 +1,12 @@
-import { useContext } from 'react';
-import { Context } from '../context';
+import { useContext } from 'react'
+import { Context } from '../context'
 
-import PageTitle from './PageTitle';
+import PageTitle from './PageTitle'
 
-import BarcodeComponent from './BarcodeComponent';
+import BarcodeComponent from './BarcodeComponent'
 
 const ProduceCodes = () => {
-  const { produceCodes } = useContext(Context);
+  const { produceCodes } = useContext(Context)
 
   return (
     <>
@@ -31,11 +31,11 @@ const ProduceCodes = () => {
                 </section>
               </div>
             </article>
-          );
+          )
         })}
       </section>
     </>
-  );
-};
+  )
+}
 
-export default ProduceCodes;
+export default ProduceCodes

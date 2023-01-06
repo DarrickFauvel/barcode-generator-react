@@ -1,39 +1,41 @@
-import { useContext } from "react";
-import { Context } from "../context";
+import { useContext } from 'react'
+import { Context } from '../context'
 
 const Form = () => {
-  const { state, setState, handleChange } = useContext(Context);
+  const { state, setState, handleChange } = useContext(Context)
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (!textInput) {
-      return;
+      return
     }
     setState((prevState) => ({
       ...prevState,
-      barcodeValue: state.textInput,
-    }));
-  };
+      barcodeValue: state.textInput
+    }))
+  }
 
   return (
-    <form id="form" onSubmit={handleSubmit}>
-      <div className="control-group">
+    <form id='form' onSubmit={handleSubmit}>
+      <div className='control-group'>
         <input
-          type="text"
-          id="textInput"
-          name="textInput"
+          type='text'
+          id='textInput'
+          name='textInput'
           value={state.textInput}
           onChange={handleChange}
-          placeholder="Enter location identifier..."
-          autoComplete="off"
+          placeholder='Enter location identifier...'
+          autoComplete='off'
         />
-        <label htmlFor="textInput"><span>example:</span> 01A035M02, 99B106A05, etc.</label>
+        <label htmlFor='textInput'>
+          <span>example:</span> 01A035M02, 99B106A05, etc.
+        </label>
       </div>
-      <button className="btn" type="submit">
+      <button className='btn' type='submit'>
         GENERATE
       </button>
     </form>
-  );
-};
+  )
+}
 
-export default Form;
+export default Form

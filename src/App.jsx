@@ -1,32 +1,17 @@
-import { Routes, Route, Outlet, Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { Context } from './context';
+import { Routes, Route, Outlet, Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { Context } from './context'
 
-import Layout from './components/Layout';
-import Header from './components/Header';
+import Layout from './components/Layout'
+import Header from './components/Header'
 
-import Footer from './components/Footer';
-import Home from './components/Home';
-import BarcodeGenerator from './components/BarcodeGenerator';
-import ProduceCodes from './components/ProduceCodes';
-// import LocationButtons from "./components/LocationButtons";
+import Home from './components/Home'
+import BarcodeGenerator from './components/BarcodeGenerator'
+import ProduceCodes from './components/ProduceCodes'
+import Footer from './components/Footer'
 
 function App() {
-  const { state } = useContext(Context);
-
-  // const changeLocation = (e) => {
-  //   const { name, textContent } = e.target;
-
-  //   setState((prevState) => ({ ...prevState, [name]: textContent }));
-  // };
-
-  // const renderSubLocationNumber = () => {
-  //   if (state.subLocationNumber.length === 1) {
-  //     return "00" + state.subLocationNumber;
-  //   } else if (state.subLocationNumber.length === 2) {
-  //     return "0" + state.subLocationNumber;
-  //   }
-  // };
+  const { state } = useContext(Context)
 
   return (
     <div className='App'>
@@ -42,7 +27,7 @@ function App() {
 
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

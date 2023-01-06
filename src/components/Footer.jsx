@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { Context } from '../context';
+import { useContext } from 'react'
+import { Context } from '../context'
 
 const Footer = () => {
-  const { state } = useContext(Context);
+  const { state } = useContext(Context)
 
   return (
     <footer className='footer'>
@@ -13,7 +13,7 @@ const Footer = () => {
         </a>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
