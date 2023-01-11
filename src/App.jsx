@@ -5,7 +5,7 @@ import { Context } from './context'
 import Layout from './components/Layout'
 import Header from './components/Header'
 
-import Home from './views/Home'
+import About from './views/About'
 import BarcodeGenerator from './views/BarcodeGenerator'
 import ProduceCodes from './views/ProduceCodes'
 import Footer from './components/Footer'
@@ -19,7 +19,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={<About />} />
           <Route path='generator' element={<BarcodeGenerator />} />
           <Route path='produce' element={<ProduceCodes />} />
         </Route>
