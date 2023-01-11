@@ -2,7 +2,7 @@ import Barcode from '../../../components/Barcode'
 
 const Card = ({ item }) => {
   return (
-    <article className='card' key={item.name}>
+    <article className='card' key={item.name} id={item.upc}>
       <h3 className='card-title'>{item.name}</h3>
 
       <div className='card-content'>
