@@ -274,7 +274,7 @@ input {
 
 .modal .backdrop {
   position: absolute;
-  background-color: var(--color-darkgray);
+  background-color: rgba(61, 61, 61, 0.9);
   top: 0;
   bottom: 0;
   left: 0;
