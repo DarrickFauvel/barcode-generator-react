@@ -1,5 +1,5 @@
 import { useState, createContext } from 'react'
-import ProduceData from './data/ProduceData'
+import produceData from './data/produceData.json'
 
 const Context = createContext()
 
@@ -26,7 +26,7 @@ const ContextProvider = (props) => {
   }
 
   return (
-    <Context.Provider value={{ state, setState, handleChange, ProduceData }}>
+    <Context.Provider value={{ state, setState, handleChange, produceData }}>
       {props.children}
     </Context.Provider>
   )

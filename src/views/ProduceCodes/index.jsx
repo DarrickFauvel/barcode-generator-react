@@ -5,7 +5,7 @@ import PageTitle from '../../components/PageTitle'
 import Card from './components/Card'
 
 const ProduceCodes = () => {
-  const { ProduceData } = useContext(Context)
+  const { produceData } = useContext(Context)
   const [showModal, setShowModal] = useState(false)
   const [item, setItem] = useState({
     name: 'Lemon',
@@ -17,7 +17,7 @@ const ProduceCodes = () => {
 
   const handleClick = (e) => {
     const itemUpc = e.target.closest('a').dataset.itemUpc
-    const newItem = ProduceData.find((item) => item.upc === itemUpc)
+    const newItem = produceData.find((item) => item.upc === itemUpc)
     setItem(newItem)
     setShowModal(true)
   }
@@ -33,22 +33,24 @@ const ProduceCodes = () => {
       <PageTitle title='Produce Codes' />
 
       <ul className='produce-index'>
-        {ProduceData.sort((a, b) => {
-          if (a.name < b.name) return -1
-          if (a.name > b.name) return 1
-          return 0
-        }).map((item) => (
-          <li key={item.name}>
-            <a href='#' onClick={handleClick} data-item-upc={item.upc}>
-              <img src={item.imgUrl} alt={item.name} />
-              {item.name}
-            </a>
-          </li>
-        ))}
+        {produceData
+          .sort((a, b) => {
+            if (a.name < b.name) return -1
+            if (a.name > b.name) return 1
+            return 0
+          })
+          .map((item) => (
+            <li key={item.name}>
+              <a href='#' onClick={handleClick} data-item-upc={item.upc}>
+                <img src={item.imgUrl} alt={item.name} />
+                {item.name}
+              </a>
+            </li>
+          ))}
       </ul>
 
       {/* <section className='cards'>
-        {ProduceData.map((item) => (
+        {produceData.map((item) => (
           <Card item={item} key={item.upc} />
         ))}
       </section> */}
