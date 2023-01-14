@@ -9,6 +9,7 @@ import About from './views/About'
 import BarcodeGenerator from './views/BarcodeGenerator'
 import ProduceCodes from './views/ProduceCodes'
 import Footer from './components/Footer'
+import BreakTimer from './views/BreakTimer'
 
 function App() {
   const { state } = useContext(Context)
@@ -22,6 +23,7 @@ function App() {
           <Route index element={<About />} />
           <Route path='generator' element={<BarcodeGenerator />} />
           <Route path='produce' element={<ProduceCodes />} />
+          <Route path='timer' element={<BreakTimer />} />
         </Route>
       </Routes>
 

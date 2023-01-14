@@ -20,6 +20,9 @@ const Header = () => {
             <li>
               <Link to='produce'>produce codes</Link>
             </li>
+            <li>
+              <Link to='timer'>break timer</Link>
+            </li>
           </ul>
         </nav>
       </div>
