@@ -20,9 +20,11 @@ const Header = () => {
             <li>
               <Link to='produce'>produce</Link>
             </li>
-            <li>
+            {/* Timer is not fully operational yet, 
+              as it requires state management */}
+            {/* <li>
               <Link to='timer'>timer</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
