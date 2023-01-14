@@ -15,11 +15,16 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <Link to='generator'>barcode generator</Link>
+              <Link to='generator'>generator</Link>
             </li>
             <li>
-              <Link to='produce'>produce codes</Link>
+              <Link to='produce'>produce</Link>
             </li>
+            {/* Timer is not fully operational yet, 
+              as it requires state management */}
+            {/* <li>
+              <Link to='timer'>timer</Link>
+            </li> */}
           </ul>
         </nav>
       </div>
