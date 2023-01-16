@@ -9,11 +9,17 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='container'>
-        <div className='navbrand'>
-          <Link to='about'>myTools</Link>
-        </div>
+        <nav className='nav'>
+          <div className='navbrand'>
+            <Link to='about'>myTools</Link>
+          </div>
 
-        <nav>
+          <a href='#' onClick={() => isMenuOpen.set(!$isMenuOpen)}>
+            Menu
+          </a>
+        </nav>
+
+        {/* <nav>
           <ul>
             <li>
               <Link to='generator'>generator</Link>
@@ -21,16 +27,12 @@ const Header = () => {
             <li>
               <Link to='produce'>produce</Link>
             </li>
-            {/* Timer is not fully operational yet, 
-              as it requires state management */}
-            {/* <li>
-              <Link to='timer'>timer</Link>
-            </li> */}
+            
             <li>
               <a href='#' onClick={() => isMenuOpen.set(!$isMenuOpen)}></a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </div>
     </header>
   )
