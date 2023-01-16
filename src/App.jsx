@@ -1,3 +1,6 @@
+import { useStore } from '@nanostores/react'
+import { isMenuOpen } from './stores/menuStore'
+
 import { Routes, Route } from 'react-router-dom'
 
 import Layout from './components/Layout'
@@ -11,8 +14,10 @@ import BreakTimer from './views/BreakTimer'
 import MenuFlyout from './components/MenuFlyout'
 
 function App() {
+  const $isMenuOpen = useStore(isMenuOpen)
+
   return (
-    <div className='App'>
+    <div className={`App ${$isMenuOpen && 'layout-shift'}`}>
       <Header />
 
       <Routes>
