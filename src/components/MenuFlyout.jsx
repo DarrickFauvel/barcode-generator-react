@@ -14,11 +14,10 @@ const MenuFlyout = () => {
     <section className={`menu-flyout ${$isMenuOpen && 'open'}`}>
       <div className='menu-header'>
         <span>Menu</span>
-        <span>
-          <a href='#' onClick={handleMenu}>
-            Close
-          </a>
-        </span>
+
+        <a href='#' onClick={handleMenu}>
+          Close
+        </a>
       </div>
 
       <div className='menu-body'>
