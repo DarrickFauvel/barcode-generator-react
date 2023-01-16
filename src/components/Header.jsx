@@ -2,6 +2,7 @@ import { useStore } from '@nanostores/react'
 import { isMenuOpen } from '../stores/menuStore'
 
 import { Link } from 'react-router-dom'
+import MenuFlyout from './MenuFlyout'
 
 const Header = () => {
   const $isMenuOpen = useStore(isMenuOpen)
@@ -34,6 +35,8 @@ const Header = () => {
           </ul>
         </nav> */}
       </div>
+
+      <MenuFlyout />
     </header>
   )
 }

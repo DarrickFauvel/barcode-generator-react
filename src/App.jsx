@@ -11,13 +11,12 @@ import BarcodeGenerator from './views/BarcodeGenerator'
 import ProduceCodes from './views/ProduceCodes'
 import Footer from './components/Footer'
 import BreakTimer from './views/BreakTimer'
-import MenuFlyout from './components/MenuFlyout'
 
 function App() {
   const $isMenuOpen = useStore(isMenuOpen)
 
   return (
-    <div className={`App ${$isMenuOpen && 'layout-shift'}`}>
+    <div className='App'>
       <Header />
 
       <Routes>
@@ -31,8 +30,6 @@ function App() {
       </Routes>
 
       <Footer />
-
-      <MenuFlyout />
     </div>
   )
 }
