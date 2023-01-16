@@ -1,7 +1,9 @@
+// Vitest example using sum function
 export default function sum(...numbers) {
   return numbers.reduce((total, number) => total + number, 0)
 }
 
+// In-source Vitesting
 if (import.meta.vitest) {
   const { describe, expect, it } = import.meta.vitest
 
