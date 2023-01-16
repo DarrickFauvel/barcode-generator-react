@@ -8,6 +8,7 @@ import BarcodeGenerator from './views/BarcodeGenerator'
 import ProduceCodes from './views/ProduceCodes'
 import Footer from './components/Footer'
 import BreakTimer from './views/BreakTimer'
+import MenuFlyout from './components/MenuFlyout'
 
 function App() {
   return (
@@ -20,10 +21,13 @@ function App() {
           <Route path='generator' element={<BarcodeGenerator />} />
           <Route path='produce' element={<ProduceCodes />} />
           <Route path='timer' element={<BreakTimer />} />
+          <Route path='about' element={<About />} />
         </Route>
       </Routes>
 
       <Footer />
+
+      <MenuFlyout />
     </div>
   )
 }
