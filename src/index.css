@@ -38,6 +38,12 @@ img {
   padding-inline: 1em;
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 2em;
+  }
+}
+
 .header,
 .footer {
   background-color: var(--color-red-40);
