@@ -1,18 +1,26 @@
-import { useContext } from 'react'
-import { Context } from '../../../context'
+import { useStore } from '@nanostores/react'
+import { generatorFormData } from '../../../stores/barcodeGeneratorStore'
 
 const Form = () => {
-  const { state, setState, handleChange } = useContext(Context)
+  const $generatorFormData = useStore(generatorFormData)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    generatorFormData.set({
+      ...$generatorFormData,
+      [name]: value?.toUpperCase()
+    })
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!textInput) {
       return
     }
-    setState((prevState) => ({
-      ...prevState,
-      barcodeValue: state.textInput
-    }))
+    generatorFormData.set({
+      ...$generatorFormData,
+      barcodeValue: $generatorFormData.textInput
+    })
   }
 
   return (
@@ -22,7 +30,7 @@ const Form = () => {
           type='text'
           id='textInput'
           name='textInput'
-          value={state.textInput}
+          value={$generatorFormData.textInput}
           onChange={handleChange}
           placeholder='Enter location identifier...'
           autoComplete='off'

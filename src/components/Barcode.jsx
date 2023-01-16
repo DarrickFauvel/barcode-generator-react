@@ -1,14 +1,14 @@
-import { useContext } from 'react'
-import { Context } from '../context'
+import { useStore } from '@nanostores/react'
+import { generatorFormData } from '../stores/barcodeGeneratorStore'
 
 import ReactBarcode from 'react-barcode'
 
 const Barcode = (props) => {
-  const { state } = useContext(Context)
+  const $generatorFormData = useStore(generatorFormData)
 
   return (
     <ReactBarcode
-      value={props.barcodeValue || state.barcodeValue}
+      value={props.barcodeValue || $generatorFormData.barcodeValue}
       height={50}
       text={props.dpci}
       fontSize={15}

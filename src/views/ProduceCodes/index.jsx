@@ -1,12 +1,16 @@
-import { useState, useEffect, useContext } from 'react'
-import { Context } from '../../context'
+import { useState } from 'react'
+import { useStore } from '@nanostores/react'
+import { isModalShown } from '../../stores/modalStore'
+
+import getProduceData from '../../helpers/getProduceData'
 
 import PageTitle from '../../components/PageTitle'
 import Card from './components/Card'
 
 const ProduceCodes = () => {
-  const { produceData } = useContext(Context)
-  const [showModal, setShowModal] = useState(false)
+  const produceData = getProduceData()
+  const $isModalShown = useStore(isModalShown)
+
   const [item, setItem] = useState({
     name: 'Lemon',
     upc: '204053000004',
@@ -19,14 +23,8 @@ const ProduceCodes = () => {
     const itemUpc = e.target.closest('a').dataset.itemUpc
     const newItem = produceData.find((item) => item.upc === itemUpc)
     setItem(newItem)
-    setShowModal(true)
+    isModalShown.set(!$isModalShown)
   }
-
-  useEffect(() => {
-    const modalEl = document.querySelector('.modal')
-
-    showModal ? modalEl.classList.remove('hide') : modalEl.classList.add('hide')
-  }, [showModal])
 
   return (
     <>
@@ -49,14 +47,10 @@ const ProduceCodes = () => {
           ))}
       </ul>
 
-      {/* <section className='cards'>
-        {produceData.map((item) => (
-          <Card item={item} key={item.upc} />
-        ))}
-      </section> */}
-
-      <section className='modal hide'>
-        <div className='backdrop' onClick={() => setShowModal(false)}>
+      <section className={`modal ${!$isModalShown && 'hide'}`}>
+        <div
+          className='backdrop'
+          onClick={() => isModalShown.set(!$isModalShown)}>
           <div className='modalCard'>
             <Card item={item} />
           </div>
