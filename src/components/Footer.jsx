@@ -1,14 +1,15 @@
-import { useContext } from 'react'
-import { Context } from '../context'
+import getAuthorName from '../helpers/getAuthorName'
+import getSocialUrl from '../helpers/getSocialUrl'
 
 const Footer = () => {
-  const { state } = useContext(Context)
-
   return (
     <footer className='footer'>
       <div className='container'>
-        <p className='author'>Created by {state.author}</p>
-        <a className='footer__link' href={state.urlWebsite} target='_blank'>
+        <p className='author'>Created by {getAuthorName()}</p>
+        <a
+          className='footer__link'
+          href={getSocialUrl('Website')}
+          target='_blank'>
           darrickdevelops.com
         </a>
       </div>

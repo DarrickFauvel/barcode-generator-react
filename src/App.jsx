@@ -1,6 +1,4 @@
-import { Routes, Route, Outlet, Link } from 'react-router-dom'
-import { useContext } from 'react'
-import { Context } from './context'
+import { Routes, Route } from 'react-router-dom'
 
 import Layout from './components/Layout'
 import Header from './components/Header'
@@ -12,8 +10,6 @@ import Footer from './components/Footer'
 import BreakTimer from './views/BreakTimer'
 
 function App() {
-  const { state } = useContext(Context)
-
   return (
     <div className='App'>
       <Header />
