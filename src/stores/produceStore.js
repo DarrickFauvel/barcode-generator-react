@@ -1,5 +1,7 @@
 import { atom } from 'nanostores'
 
+export const selectedProduceItem = atom({})
+
 export const produceData = atom([
   {
     name: 'Banana',
