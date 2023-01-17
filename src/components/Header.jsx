@@ -16,7 +16,7 @@ const Header = () => {
           </div>
 
           <a href='#' onClick={() => isMenuOpen.set(!$isMenuOpen)}>
-            Menu
+            <img src='/icons/menu.svg' height={20} alt='' />
           </a>
         </nav>
 
