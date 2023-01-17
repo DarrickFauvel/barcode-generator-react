@@ -3,15 +3,18 @@ import { atom } from 'nanostores'
 export const menuItems = atom([
   {
     name: 'Barcode Generator',
-    route: 'generator'
+    route: 'generator',
+    icon: 'barcode.svg'
   },
   {
     name: 'Produce Codes',
-    route: 'produce'
+    route: 'produce',
+    icon: 'fruits.svg'
   },
   {
     name: 'About myTools',
-    route: 'about'
+    route: 'about',
+    icon: 'info.svg'
   }
 ])
 

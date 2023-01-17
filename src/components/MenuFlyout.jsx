@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { menuItems, isMenuOpen } from '../stores/menuStore'
 
 const MenuFlyout = () => {
@@ -16,7 +16,7 @@ const MenuFlyout = () => {
         <span>Menu</span>
 
         <a href='#' onClick={handleMenu}>
-          Close
+          <img src='/icons/close.svg' height={20} alt='' />
         </a>
       </div>
 
@@ -25,6 +25,7 @@ const MenuFlyout = () => {
           {$menuItems.map((item) => (
             <li key={item.name}>
               <Link to={item.route} onClick={handleMenu}>
+                <img src={`/icons/${item.icon}`} alt='' />
                 {item.name}
               </Link>
             </li>
