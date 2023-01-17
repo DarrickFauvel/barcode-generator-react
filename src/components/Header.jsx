@@ -12,7 +12,7 @@ const Header = () => {
       <div className='container'>
         <nav className='nav'>
           <div className='navbrand'>
-            <Link to='about'>myTools</Link>
+            <Link to='about'>redTools</Link>
           </div>
 
           <a href='#' onClick={() => isMenuOpen.set(!$isMenuOpen)}>
