@@ -1,18 +1,20 @@
 import { useStore } from '@nanostores/react'
 import { authorData } from '../../stores/authorStore'
+import { appData } from '../../stores/appStore'
 
 import PageTitle from '../../components/PageTitle'
 
 const About = () => {
   const $authorData = useStore(authorData)
+  const $appData = useStore(appData)
 
   return (
     <section className='about'>
-      <PageTitle title='About myTools' />
+      <PageTitle title={`About ${$appData.title}`} />
 
       <p>
-        <strong>myTools</strong> is a personal web application project by me,{' '}
-        {$authorData.name}.
+        <strong>{$appData.title}</strong> is a personal web application project
+        by me, {$authorData.name}.
       </p>
 
       <p>
@@ -27,13 +29,16 @@ const About = () => {
       <article>
         <p>This web app was developed using:</p>
         <ul>
-          <li>ReactJS</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>AWS Amplify</li>
-          <li>GitHub</li>
-          <li>Visual Studio Code</li>
+          {$appData.techStack.map((item) => (
+            <li key={item.name}>
+              <strong>
+                <a href={item.url} target='_blank'>
+                  {item.name}
+                </a>
+              </strong>{' '}
+              - {item.description}
+            </li>
+          ))}
         </ul>
       </article>
     </section>
