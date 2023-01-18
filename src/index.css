@@ -63,9 +63,12 @@ img {
   margin-bottom: 1em;
   padding-block: 0.65em;
   top: 0;
-  /* box-shadow: 0 1px 3px gray; */
+  height: 4em;
 
   & .navbrand > a {
+    display: flex;
+    align-items: center;
+    /* gap: 0.5em; */
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--color-white-100);
@@ -73,6 +76,12 @@ img {
     margin: 0;
     padding: 0;
     line-height: 0;
+  }
+
+  & .navbrand img {
+    height: 2em;
+    width: 2em;
+    transform: translateY(10%) rotate(-15deg);
   }
 
   /* & ul {
@@ -376,15 +385,17 @@ input {
 .menu-flyout .menu-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1em;
-  border-bottom: 1px solid var(--color-lightgray);
+  height: 4em;
+  border-bottom: 1px solid rgb(63, 63, 63);
 }
 
 .menu-flyout ul {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  padding: 1em;
+  padding-inline: 1em;
 }
 
 .menu-flyout li a {
