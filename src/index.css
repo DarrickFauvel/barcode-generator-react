@@ -402,11 +402,17 @@ input {
   display: flex;
   align-items: center;
   gap: 0.75em;
+  color: #ccc;
 }
 
 .menu-flyout ul img {
   width: 2em;
   height: 2em;
+}
+
+.menu-flyout .active {
+  font-weight: bold;
+  color: var(--color-white-100);
 }
 
 /* .App {

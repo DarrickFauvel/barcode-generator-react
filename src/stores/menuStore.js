@@ -1,5 +1,9 @@
 import { atom } from 'nanostores'
 
+export const isMenuOpen = atom(false)
+
+export const selectedMenuItem = atom(null)
+
 export const menuItems = atom([
   {
     name: 'Barcode Generator',
@@ -17,5 +21,3 @@ export const menuItems = atom([
     icon: 'info.svg'
   }
 ])
-
-export const isMenuOpen = atom(false)

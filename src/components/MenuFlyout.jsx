@@ -1,13 +1,19 @@
 import { useStore } from '@nanostores/react'
 import { Link } from 'react-router-dom'
-import { menuItems, isMenuOpen } from '../stores/menuStore'
+import { menuItems, isMenuOpen, selectedMenuItem } from '../stores/menuStore'
 
 const MenuFlyout = () => {
   const $menuItems = useStore(menuItems)
   const $isMenuOpen = useStore(isMenuOpen)
+  const $selectedMenuItem = useStore(selectedMenuItem)
 
-  const handleMenu = () => {
+  const handleMenuFlyout = () => {
     isMenuOpen.set(!$isMenuOpen)
+  }
+
+  const handleMenuClick = (itemName) => {
+    selectedMenuItem.set(itemName)
+    handleMenuFlyout()
   }
 
   return (
@@ -15,7 +21,7 @@ const MenuFlyout = () => {
       <div className='menu-header'>
         <span>Menu</span>
 
-        <a href='#' onClick={handleMenu}>
+        <a href='#' onClick={handleMenuFlyout}>
           <img src='/icons/close.svg' height={20} alt='' />
         </a>
       </div>
@@ -24,7 +30,10 @@ const MenuFlyout = () => {
         <ul>
           {$menuItems.map((item) => (
             <li key={item.name}>
-              <Link to={item.route} onClick={handleMenu}>
+              <Link
+                to={item.route}
+                onClick={() => handleMenuClick(item.name)}
+                className={item.name === $selectedMenuItem ? 'active' : ''}>
                 <img src={`/icons/${item.icon}`} alt='' />
                 {item.name}
               </Link>
