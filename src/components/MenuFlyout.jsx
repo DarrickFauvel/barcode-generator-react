@@ -13,7 +13,6 @@ const MenuFlyout = () => {
 
   const handleMenuClick = (itemName) => {
     selectedMenuItem.set(itemName)
-
     handleMenuFlyout()
   }
 
