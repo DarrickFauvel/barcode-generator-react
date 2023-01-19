@@ -1,16 +1,21 @@
+import { useEffect } from 'react'
 import { useStore } from '@nanostores/react'
 import { isModalShown } from '../../stores/modalStore'
 import { selectedProduceItem } from '../../stores/produceStore'
+import { activeMenuItemHighlight } from '../../stores/menuStore'
 
 import getProduceData from '../../helpers/getProduceData'
 
 import PageTitle from '../../components/PageTitle'
 import Card from './components/Card'
 
+const title = 'Produce Codes'
+
 const ProduceCodes = () => {
   const produceData = getProduceData()
   const $isModalShown = useStore(isModalShown)
   const $selectedProduceItem = useStore(selectedProduceItem)
+  const $activeMenuItemHighlight = useStore(activeMenuItemHighlight)
 
   const handleClick = (e) => {
     const itemUpc = e.target.closest('a').dataset.itemUpc
@@ -19,9 +24,16 @@ const ProduceCodes = () => {
     isModalShown.set(!$isModalShown)
   }
 
+  useEffect(() => {
+    const setActiveMenuItemHighlight = (menuItemName) => {
+      activeMenuItemHighlight.set(menuItemName)
+    }
+    setActiveMenuItemHighlight('Produce Codes')
+  }, [])
+
   return (
     <>
-      <PageTitle title='Produce Codes' />
+      <PageTitle title={title} />
 
       <ul className='produce-index'>
         {produceData

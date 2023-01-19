@@ -2,7 +2,7 @@ import { atom } from 'nanostores'
 
 export const isMenuOpen = atom(false)
 
-export const selectedMenuItem = atom(null)
+export const activeMenuItemHighlight = atom(null)
 
 export const menuItems = atom([
   {
@@ -16,7 +16,7 @@ export const menuItems = atom([
     icon: 'fruits.svg'
   },
   {
-    name: 'About myTools',
+    name: 'About redTools',
     route: 'about',
     icon: 'info.svg'
   }
