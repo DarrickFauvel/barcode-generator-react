@@ -16,7 +16,7 @@ export const menuItems = atom([
     icon: 'fruits.svg'
   },
   {
-    name: 'About redTools',
+    name: 'About redTool',
     route: 'about',
     icon: 'info.svg'
   }

@@ -6,7 +6,7 @@ import { activeMenuItemHighlight } from '../../stores/menuStore'
 
 import PageTitle from '../../components/PageTitle'
 
-const title = 'About redTools'
+const title = 'About redTool'
 
 const About = () => {
   const $authorData = useStore(authorData)
