@@ -1,7 +1,7 @@
 import { atom } from 'nanostores'
 
 export const appData = atom({
-  title: 'redTools',
+  title: 'redTool',
   icon: 'mobile.svg',
   techStack: [
     {
