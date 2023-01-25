@@ -18,7 +18,9 @@ const MenuFlyout = () => {
   return (
     <section className={`menu-flyout ${$isMenuOpen && 'open'}`}>
       <div className='menu-header'>
-        <span>Menu</span>
+        <Link to='/' onClick={handleMenuFlyout}>
+          Menu
+        </Link>
 
         <a href='#' onClick={handleMenuFlyout}>
           <img src='/icons/close.svg' height={20} alt='' />

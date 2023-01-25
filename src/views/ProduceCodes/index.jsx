@@ -15,7 +15,6 @@ const ProduceCodes = () => {
   const produceData = getProduceData()
   const $isModalShown = useStore(isModalShown)
   const $selectedProduceItem = useStore(selectedProduceItem)
-  const $activeMenuItemHighlight = useStore(activeMenuItemHighlight)
 
   const handleClick = (e) => {
     const itemUpc = e.target.closest('a').dataset.itemUpc
@@ -25,10 +24,7 @@ const ProduceCodes = () => {
   }
 
   useEffect(() => {
-    const setActiveMenuItemHighlight = (menuItemName) => {
-      activeMenuItemHighlight.set(menuItemName)
-    }
-    setActiveMenuItemHighlight('Produce Codes')
+    activeMenuItemHighlight.set('Produce Codes')
   }, [])
 
   return (

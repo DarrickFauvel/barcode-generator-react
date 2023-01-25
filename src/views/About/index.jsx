@@ -11,13 +11,9 @@ const title = 'About redTool'
 const About = () => {
   const $authorData = useStore(authorData)
   const $appData = useStore(appData)
-  const $activeMenuItemHighlight = useStore(activeMenuItemHighlight)
 
   useEffect(() => {
-    const setActiveMenuItemHighlight = (menuItemName) => {
-      activeMenuItemHighlight.set(menuItemName)
-    }
-    setActiveMenuItemHighlight('About redTools')
+    activeMenuItemHighlight.set('About redTool')
   }, [])
 
   return (
