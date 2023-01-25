@@ -14,7 +14,7 @@ const Header = () => {
       <div className='container'>
         <nav className='nav'>
           <div className='navbrand'>
-            <Link to='about'>
+            <Link to='/'>
               <img src={`/icons/${$appData.icon}`} alt='' />
               <span>{$appData.title}</span>
             </Link>

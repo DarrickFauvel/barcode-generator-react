@@ -11,13 +11,9 @@ const title = 'Barcode Generator'
 
 const BarcodeGenerator = () => {
   const $generatorFormData = useStore(generatorFormData)
-  const $activeMenuItemHighlight = useStore(activeMenuItemHighlight)
 
   useEffect(() => {
-    const setActiveMenuItemHighlight = (menuItemName) => {
-      activeMenuItemHighlight.set(menuItemName)
-    }
-    setActiveMenuItemHighlight('Barcode Generator')
+    activeMenuItemHighlight.set('Barcode Generator')
   }, [])
 
   return (

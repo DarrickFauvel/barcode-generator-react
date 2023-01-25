@@ -5,12 +5,13 @@ import { Routes, Route } from 'react-router-dom'
 
 import Layout from './components/Layout'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
-import About from './views/About'
+import Menu from './views/Menu'
 import BarcodeGenerator from './views/BarcodeGenerator'
 import ProduceCodes from './views/ProduceCodes'
-import Footer from './components/Footer'
 import BreakTimer from './views/BreakTimer'
+import About from './views/About'
 
 function App() {
   const $isMenuOpen = useStore(isMenuOpen)
@@ -21,7 +22,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<About />} />
+          <Route index element={<Menu />} />
           <Route path='generator' element={<BarcodeGenerator />} />
           <Route path='produce' element={<ProduceCodes />} />
           <Route path='timer' element={<BreakTimer />} />
