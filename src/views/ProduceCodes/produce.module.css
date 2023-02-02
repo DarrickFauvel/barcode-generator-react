@@ -1,0 +1,29 @@
+.produceIndex {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-bottom: 5em;
+}
+
+.produceIndex a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  border: 1px solid var(--color-lightgray);
+  border-radius: 5px;
+  padding-inline: 0.5em;
+  padding-block: 0.1em;
+  text-decoration: none;
+  color: var(--color-black-0);
+  overflow: hidden;
+}
+
+.produceIndex a:hover {
+  border: 1px solid var(--color-darkgray);
+}
+
+.produceIndex img {
+  width: 40px;
+}
