@@ -1,0 +1,56 @@
+.drawer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  position: absolute;
+  top: 0;
+  right: -230px;
+  height: 100vh;
+  width: 230px;
+  background-color: #333;
+  color: var(--color-white-100);
+  z-index: 100;
+  transition: 250ms;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+.drawer a {
+  color: var(--color-white-100);
+  text-decoration: none;
+}
+
+.drawer .drawerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  height: 4em;
+  border-bottom: 1px solid rgb(63, 63, 63);
+}
+
+.drawer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-inline: 1em;
+}
+
+.drawer li a {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  color: #ccc;
+}
+
+.drawer ul img {
+  width: 2em;
+  height: 2em;
+}
+
+.drawer .active {
+  font-weight: bold;
+  color: var(--color-white-100);
+}

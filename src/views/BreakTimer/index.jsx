@@ -1,14 +1,16 @@
-import PageTitle from '../../components/PageTitle'
-import Timer from './components/Timer'
+import PageTitle from '../../components/PageTitle';
+import Timer from './components/Timer';
+
+import classes from './breakTimer.module.css';
 
 const BreakTimer = () => {
-  const Alarm = () => <audio id='alarm_audio'></audio>
+  const Alarm = () => <audio id="alarm_audio"></audio>;
 
   return (
     <>
-      <PageTitle title='Break Timer' />
+      <PageTitle title="Break Timer" />
 
-      <section className='break-timers'>
+      <section className={classes.breakTimers}>
         <Timer breakMinutes={0.05} />
         <br />
         <br />
@@ -18,7 +20,7 @@ const BreakTimer = () => {
         <Timer breakMinutes={30} />
       </section>
     </>
-  )
-}
+  );
+};
 
-export default BreakTimer
+export default BreakTimer;

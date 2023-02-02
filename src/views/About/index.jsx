@@ -1,23 +1,25 @@
-import { useEffect } from 'react'
-import { useStore } from '@nanostores/react'
-import { authorData } from '../../stores/authorStore'
-import { appData } from '../../stores/appStore'
-import { activeMenuItemHighlight } from '../../stores/menuStore'
+import { useEffect } from 'react';
+import { useStore } from '@nanostores/react';
+import { authorData } from '../../stores/authorStore';
+import { appData } from '../../stores/appStore';
+import { activeMenuItemHighlight } from '../../stores/menuStore';
 
-import PageTitle from '../../components/PageTitle'
+import classes from './about.module.css';
 
-const title = 'About redTool'
+import PageTitle from '../../components/PageTitle';
+
+const title = 'About redTool';
 
 const About = () => {
-  const $authorData = useStore(authorData)
-  const $appData = useStore(appData)
+  const $authorData = useStore(authorData);
+  const $appData = useStore(appData);
 
   useEffect(() => {
-    activeMenuItemHighlight.set('About redTool')
-  }, [])
+    activeMenuItemHighlight.set('About redTool');
+  }, []);
 
   return (
-    <section className='about'>
+    <section className={classes.about}>
       <PageTitle title={title} />
 
       <p>
@@ -40,7 +42,7 @@ const About = () => {
           {$appData.techStack.map((item) => (
             <li key={item.name}>
               <strong>
-                <a href={item.url} target='_blank'>
+                <a href={item.url} target="_blank">
                   {item.name}
                 </a>
               </strong>{' '}
@@ -50,7 +52,7 @@ const About = () => {
         </ul>
       </article>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
