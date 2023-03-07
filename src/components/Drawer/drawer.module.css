@@ -22,13 +22,18 @@
   text-decoration: none;
 }
 
-.drawer .drawerHeader {
+.drawerHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 1em;
   height: 4em;
   border-bottom: 1px solid rgb(63, 63, 63);
+}
+
+.close {
+  width: auto;
+  cursor: pointer;
 }
 
 .drawer ul {

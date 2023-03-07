@@ -20,10 +20,9 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--color-white-100);
   color: var(--color-gray-20);
-  overflow: hidden;
 }
 
 ul {

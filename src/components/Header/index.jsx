@@ -1,15 +1,15 @@
-import { useStore } from '@nanostores/react';
-import { isMenuOpen } from '../../stores/menuStore';
-import { appData } from '../../stores/appStore';
+import { useStore } from "@nanostores/react"
+import { isMenuOpen } from "../../stores/menuStore"
+import { appData } from "../../stores/appStore"
 
-import { Link } from 'react-router-dom';
-import Drawer from '../Drawer';
+import { Link } from "react-router-dom"
+import Drawer from "../Drawer"
 
-import classes from './header.module.css';
+import classes from "./header.module.css"
 
 const Header = () => {
-  const $isMenuOpen = useStore(isMenuOpen);
-  const $appData = useStore(appData);
+  const $isMenuOpen = useStore(isMenuOpen)
+  const $appData = useStore(appData)
 
   return (
     <header className={classes.header}>
@@ -22,30 +22,19 @@ const Header = () => {
             </Link>
           </div>
 
-          <a href="#" onClick={() => isMenuOpen.set(!$isMenuOpen)}>
-            <img src="/icons/menu.svg" height={20} alt="" />
-          </a>
+          <img
+            className={classes.burger}
+            src="/icons/menu.svg"
+            height={20}
+            alt=""
+            onClick={() => isMenuOpen.set(!$isMenuOpen)}
+          />
         </nav>
-
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to='generator'>generator</Link>
-            </li>
-            <li>
-              <Link to='produce'>produce</Link>
-            </li>
-            
-            <li>
-              <a href='#' onClick={() => isMenuOpen.set(!$isMenuOpen)}></a>
-            </li>
-          </ul>
-        </nav> */}
       </div>
 
       <Drawer />
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

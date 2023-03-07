@@ -1,33 +1,33 @@
-import { useStore } from '@nanostores/react';
-import { Link } from 'react-router-dom';
+import { useStore } from "@nanostores/react"
+import { Link } from "react-router-dom"
 import {
   menuItems,
   isMenuOpen,
   activeMenuItemHighlight,
-} from '../../stores/menuStore';
+} from "../../stores/menuStore"
 
-import classes from './drawer.module.css';
+import classes from "./drawer.module.css"
 
 const MenuFlyout = () => {
-  const $menuItems = useStore(menuItems);
-  const $isMenuOpen = useStore(isMenuOpen);
-  const $activeMenuItemHighlight = useStore(activeMenuItemHighlight);
+  const $menuItems = useStore(menuItems)
+  const $isMenuOpen = useStore(isMenuOpen)
+  const $activeMenuItemHighlight = useStore(activeMenuItemHighlight)
 
   const handleMenuFlyout = () => {
-    isMenuOpen.set(!$isMenuOpen);
-  };
+    isMenuOpen.set(!$isMenuOpen)
+  }
 
   return (
     <section
       className={`${classes.drawer} ${$isMenuOpen && `${classes.open}`}`}>
       <div className={classes.drawerHeader}>
-        <Link to="/" onClick={handleMenuFlyout}>
-          Menu
-        </Link>
-
-        <a href="#" onClick={handleMenuFlyout}>
-          <img src="/icons/close.svg" height={20} alt="" />
-        </a>
+        <img
+          className={classes.close}
+          src="/icons/close.svg"
+          height={20}
+          alt=""
+          onClick={handleMenuFlyout}
+        />
       </div>
 
       <div className={classes.menuBody}>
@@ -40,7 +40,7 @@ const MenuFlyout = () => {
                 className={
                   item.name === $activeMenuItemHighlight
                     ? `${classes.active}`
-                    : ''
+                    : ""
                 }>
                 <img src={`/icons/${item.icon}`} alt="" />
                 {item.name}
@@ -50,7 +50,7 @@ const MenuFlyout = () => {
         </ul>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default MenuFlyout;
+export default MenuFlyout

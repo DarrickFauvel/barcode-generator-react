@@ -1,7 +1,7 @@
 .produceIndex {
   display: flex;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   gap: 1em;
   margin-bottom: 5em;
 }
@@ -13,7 +13,7 @@
   gap: 0.3em;
   border: 1px solid var(--color-lightgray);
   border-radius: 5px;
-  padding-inline: 0.5em;
+  padding-inline: 1em;
   padding-block: 0.1em;
   text-decoration: none;
   color: var(--color-black-0);
