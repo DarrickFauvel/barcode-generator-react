@@ -13,12 +13,6 @@ const MenuFlyout = () => {
   const $isMenuOpen = useStore(isMenuOpen)
   const $activeMenuItemHighlight = useStore(activeMenuItemHighlight)
 
-  const aboutLink = {
-    name: "About redTool",
-    route: "about",
-    icon: "info.svg",
-  }
-
   const handleMenuFlyout = () => {
     isMenuOpen.set(!$isMenuOpen)
   }
@@ -53,19 +47,6 @@ const MenuFlyout = () => {
               </Link>
             </li>
           ))}
-          <li>
-            <Link
-              to={aboutLink.route}
-              onClick={handleMenuFlyout}
-              className={
-                aboutLink.name === $activeMenuItemHighlight
-                  ? `${classes.active}`
-                  : ""
-              }>
-              <img src={`/icons/${aboutLink.icon}`} alt="" />
-              {aboutLink.name}
-            </Link>
-          </li>
         </ul>
       </div>
     </section>
