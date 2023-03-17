@@ -17,6 +17,7 @@
   --color-gray: hsl(0, 0%, 50%);
   --color-lightgray: hsl(0, 0%, 83%);
   --color-darkgray: hsl(0, 0%, 66%);
+  scroll-behavior: smooth;
 }
 
 body {
