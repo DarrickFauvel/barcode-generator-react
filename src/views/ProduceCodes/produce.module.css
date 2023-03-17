@@ -1,7 +1,7 @@
 .produceIndex {
   display: flex;
-  flex-direction: column;
-  /* flex-wrap: wrap; */
+  /* flex-direction: column; */
+  flex-wrap: wrap;
   gap: 1em;
   margin-bottom: 5em;
 }
