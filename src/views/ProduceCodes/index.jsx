@@ -42,10 +42,7 @@ const ProduceCodes = () => {
           })
           .map((item) => (
             <li key={item.name}>
-              <a
-                href="javascript:return false"
-                onClick={handleClick}
-                data-item-upc={item.upc}>
+              <a href="#" onClick={handleClick} data-item-upc={item.upc}>
                 <img src={item.imgUrl} alt={item.name} />
                 {item.name}
               </a>
