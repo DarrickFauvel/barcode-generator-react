@@ -1,20 +1,20 @@
-import { useStore } from '@nanostores/react';
-import { isMenuOpen } from './stores/menuStore';
+import { useStore } from "@nanostores/react"
+import { isMenuOpen } from "./stores/menuStore"
 
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom"
 
-import Layout from './components/Layout';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Layout from "./components/Layout"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
 
-import Menu from './views/Menu';
-import BarcodeGenerator from './views/BarcodeGenerator';
-import ProduceCodes from './views/ProduceCodes';
-import BreakTimer from './views/BreakTimer';
-import About from './views/About';
+import Menu from "./views/Menu"
+import BarcodeGenerator from "./views/BarcodeGenerator"
+import ProduceCodes from "./views/ProduceCodes"
+import BreakTimer from "./views/BreakTimer"
+import About from "./views/About"
 
 function App() {
-  const $isMenuOpen = useStore(isMenuOpen);
+  const $isMenuOpen = useStore(isMenuOpen)
 
   return (
     <div className="App">
@@ -32,7 +32,7 @@ function App() {
 
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
