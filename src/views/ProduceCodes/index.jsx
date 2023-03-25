@@ -19,7 +19,7 @@ const ProduceCodes = () => {
   const $selectedProduceItem = useStore(selectedProduceItem)
 
   const handleClick = (e) => {
-    const itemUpc = e.target.closest("a").dataset.itemUpc
+    const itemUpc = e.target.closest("li").dataset.itemUpc
     const newItem = produceData.find((item) => item.upc === itemUpc)
     selectedProduceItem.set(newItem)
     isModalShown.set(!$isModalShown)
@@ -41,11 +41,9 @@ const ProduceCodes = () => {
             return 0
           })
           .map((item) => (
-            <li key={item.name}>
-              <a href="#" onClick={handleClick} data-item-upc={item.upc}>
-                <img src={item.imgUrl} alt={item.name} />
-                {item.name}
-              </a>
+            <li key={item.name} onClick={handleClick} data-item-upc={item.upc}>
+              <img src={item.imgUrl} alt={item.name} />
+              {item.name}
             </li>
           ))}
       </ul>
