@@ -10,11 +10,13 @@
   background-color: #333;
   color: var(--color-white-100);
   z-index: 100;
+  opacity: 0;
   transition: 250ms;
 }
 
 .drawer.open {
-  right: 0;
+  opacity: 1;
+  right: -1em;
 }
 
 .drawer a {
