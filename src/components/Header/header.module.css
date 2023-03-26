@@ -13,7 +13,6 @@
 /* Header */
 .header {
   margin-bottom: 1em;
-  padding-block: 0.65em;
   top: 0;
   height: 4em;
 }
@@ -38,9 +37,11 @@
 }
 
 .nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-block: 0.65em;
 }
 
 .burger {

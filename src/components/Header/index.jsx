@@ -29,10 +29,10 @@ const Header = () => {
             alt=""
             onClick={() => isMenuOpen.set(!$isMenuOpen)}
           />
+
+          <Drawer />
         </nav>
       </div>
-
-      <Drawer />
     </header>
   )
 }
