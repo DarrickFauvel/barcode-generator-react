@@ -27,7 +27,7 @@ const Header = () => {
             src="/icons/menu.svg"
             height={20}
             alt=""
-            onClick={() => isMenuOpen.set(!$isMenuOpen)}
+            onClick={() => isMenuOpen.set(true)}
           />
 
           <Drawer />
