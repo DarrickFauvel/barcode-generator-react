@@ -129,4 +129,32 @@ export const produceData = atom([
     imgUrl:
       "https://target.scene7.com/is/image/Target/GUEST_6e9b6bee-9320-4ddd-ae86-38d6c636ec63?wid=325&hei=325&qlt=80&fmt=pjpeg",
   },
+  {
+    name: "Peach",
+    upc: "204038000005",
+    dpci: "266-03-0010",
+    imgUrl:
+      "https://target.scene7.com/is/image/Target/GUEST_60229733-e225-4ef7-bd7f-b9d315977744?wid=325&hei=325&qlt=80&fmt=pjpeg",
+  },
+  {
+    name: "Seedless Watermelon",
+    upc: "204032000001",
+    dpci: "267-04-4032",
+    imgUrl:
+      "https://target.scene7.com/is/image/Target/GUEST_bf564d29-ec9d-4657-8019-e90709bf48f7?wid=325&hei=325&qlt=80&fmt=pjpeg",
+  },
+  {
+    name: "Plum",
+    upc: "204440000006",
+    dpci: "266-03-0022",
+    imgUrl:
+      "https://target.scene7.com/is/image/Target/GUEST_fdd6ed04-7eea-4172-b0e0-856a51b17e10?wid=325&hei=325&qlt=80&fmt=pjpeg",
+  },
+  {
+    name: "White Peach",
+    upc: "204400000008",
+    dpci: "266-03-0012",
+    imgUrl:
+      "https://target.scene7.com/is/image/Target/GUEST_fb9bf4e6-b4a8-4bdd-b835-c98753c422be?wid=325&hei=325&qlt=80&fmt=pjpeg",
+  },
 ])
