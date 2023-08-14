@@ -1,5 +1,6 @@
 {
   "name": "redtool",
+  "description": "A mobile web app to help team members on the job at a nation-wide North American retail store with a red bullseye logo.",
   "private": true,
   "version": "0.0.0",
   "type": "module",
