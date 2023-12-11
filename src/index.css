@@ -17,6 +17,9 @@
   --color-gray: hsl(0, 0%, 50%);
   --color-lightgray: hsl(0, 0%, 83%);
   --color-darkgray: hsl(0, 0%, 66%);
+  --cname-charcoal: #36454f;
+
+  --screen-width-max: 769px;
   scroll-behavior: smooth;
 }
 
@@ -24,7 +27,7 @@ body {
   position: relative;
   z-index: 1;
   font-family: "Roboto", sans-serif;
-  background-color: var(--color-white-100);
+  background-color: var(--cname-charcoal);
   color: var(--color-gray-20);
 }
 
@@ -39,7 +42,7 @@ img {
 .container {
   margin-inline: auto;
   padding-inline: 1em;
-  max-width: 640px;
+  /* max-width: 640px; */
 }
 
 .btn {
