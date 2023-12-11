@@ -20,7 +20,7 @@ const Menu = () => {
 
   return (
     <>
-      <PageTitle title={"Menu"} />
+      {/* <PageTitle title={"Menu"} /> */}
 
       <section className={classes.menu}>
         <ul className={classes.tools}>

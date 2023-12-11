@@ -1,21 +1,20 @@
-import classes from './layout.module.css';
+import classes from "./layout.module.css"
 
-import { useStore } from '@nanostores/react';
-import { isMenuOpen } from '../../stores/menuStore';
+import { useStore } from "@nanostores/react"
+import { isMenuOpen } from "../../stores/menuStore"
 
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom"
 
 const Layout = () => {
-  const $isMenuOpen = useStore(isMenuOpen);
+  const $isMenuOpen = useStore(isMenuOpen)
 
   return (
     <main className={classes.main}>
-      <div className="container">
+      <div className={`container ${classes["main-container"]}`}>
         <Outlet />
       </div>
-      {/* END container */}
     </main>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
