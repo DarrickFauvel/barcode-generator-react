@@ -1,9 +1,16 @@
 .header {
+  position: relative;
+}
+
+.header-container {
+  position: fixed;
+  z-index: 2;
+
+  width: 100%;
+  max-width: var(--screen-width-max);
+
   background-color: var(--color-red-40);
   color: var(--color-white-100);
-  position: fixed;
-  width: 100%;
-  z-index: 2;
 }
 
 .header a {
@@ -12,7 +19,7 @@
 
 /* Header */
 .header {
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
   top: 0;
   height: 4em;
 }

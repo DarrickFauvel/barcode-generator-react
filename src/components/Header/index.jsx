@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header className={classes.header}>
-      <div className="container">
+      <div className={`container ${classes["header-container"]}`}>
         <nav className={classes.nav}>
           <div className={classes.navbrand}>
             <Link to="/">
