@@ -13,11 +13,13 @@ import ProduceCodes from "./views/ProduceCodes"
 import BreakTimer from "./views/BreakTimer"
 import About from "./views/About"
 
+import classes from "./app.module.css"
+
 function App() {
   const $isMenuOpen = useStore(isMenuOpen)
 
   return (
-    <div className="App">
+    <div className={classes.app}>
       <Header />
 
       <Routes>
