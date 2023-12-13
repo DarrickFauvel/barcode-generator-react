@@ -1,35 +1,35 @@
-import { useStore } from '@nanostores/react';
-import { generatorFormData } from '../../../../stores/barcodeGeneratorStore';
+import { useStore } from "@nanostores/react"
+import { generatorFormData } from "../../../../stores/barcodeGeneratorStore"
 
-import classes from './form.module.css';
+import classes from "./form.module.css"
 
 const Form = () => {
-  const $generatorFormData = useStore(generatorFormData);
+  const $generatorFormData = useStore(generatorFormData)
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     generatorFormData.set({
       ...$generatorFormData,
       [name]: value?.toUpperCase(),
-    });
-  };
+    })
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (!textInput) {
-      return;
+      return
     }
     generatorFormData.set({
       ...$generatorFormData,
       barcodeValue: $generatorFormData.textInput,
-    });
-  };
+    })
+  }
 
   return (
     <form id="form" onSubmit={handleSubmit}>
       <div className={classes.controlGroup}>
         <input
-          type="text"
+          type="search"
           id="textInput"
           name="textInput"
           value={$generatorFormData.textInput}
@@ -45,7 +45,7 @@ const Form = () => {
         GENERATE
       </button>
     </form>
-  );
-};
+  )
+}
 
-export default Form;
+export default Form
