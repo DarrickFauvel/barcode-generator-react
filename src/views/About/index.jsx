@@ -1,25 +1,27 @@
-import { useEffect } from 'react';
-import { useStore } from '@nanostores/react';
-import { authorData } from '../../stores/authorStore';
-import { appData } from '../../stores/appStore';
-import { activeMenuItemHighlight } from '../../stores/menuStore';
+import { useEffect } from "react"
+import { useStore } from "@nanostores/react"
+import { authorData } from "../../stores/authorStore"
+import { appData } from "../../stores/appStore"
+import { activeMenuItemHighlight } from "../../stores/menuStore"
 
-import classes from './about.module.css';
+import classes from "./about.module.css"
 
-import PageTitle from '../../components/PageTitle';
+import PageTitle from "../../components/PageTitle"
+import BackLink from "../../components/BackLink"
 
-const title = 'About redTool';
+const title = "About redTool"
 
 const About = () => {
-  const $authorData = useStore(authorData);
-  const $appData = useStore(appData);
+  const $authorData = useStore(authorData)
+  const $appData = useStore(appData)
 
   useEffect(() => {
-    activeMenuItemHighlight.set('About redTool');
-  }, []);
+    activeMenuItemHighlight.set("About redTool")
+  }, [])
 
   return (
     <section className={classes.about}>
+      <BackLink />
       <PageTitle title={title} />
 
       <p>
@@ -45,14 +47,14 @@ const About = () => {
                 <a href={item.url} target="_blank">
                   {item.name}
                 </a>
-              </strong>{' '}
+              </strong>{" "}
               - {item.description}
             </li>
           ))}
         </ul>
       </article>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About
