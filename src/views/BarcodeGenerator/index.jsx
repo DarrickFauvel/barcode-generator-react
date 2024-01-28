@@ -10,6 +10,7 @@ import Barcode from "../../components/Barcode"
 const title = "Barcode Generator"
 
 import classes from "./barcodegenerator.module.css"
+import BackLink from "../../components/BackLink"
 
 const BarcodeGenerator = () => {
   const $generatorFormData = useStore(generatorFormData)
@@ -20,10 +21,9 @@ const BarcodeGenerator = () => {
 
   return (
     <>
+      <BackLink />
       <PageTitle title={title} />
-
       <Form />
-
       <section className={classes.barcode}>
         {$generatorFormData.barcodeValue && (
           <Barcode value={$generatorFormData.barcodeValue} />

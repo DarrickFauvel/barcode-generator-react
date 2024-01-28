@@ -10,6 +10,7 @@ import getProduceData from "../../helpers/getProduceData"
 
 import PageTitle from "../../components/PageTitle"
 import Card from "./components/Card"
+import BackLink from "../../components/BackLink"
 
 const title = "Produce Codes"
 
@@ -31,6 +32,7 @@ const ProduceCodes = () => {
 
   return (
     <>
+      <BackLink />
       <PageTitle title={title} />
 
       <ul className={classes.produceIndex}>
