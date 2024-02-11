@@ -37,9 +37,17 @@
   line-height: 0;
 }
 
-.header .navbrand img {
+/* .header .navbrand img {
   height: 2em;
   width: 2em;
+  transform: translateY(10%) rotate(-15deg);
+} */
+
+.header .navbrand .icon {
+  height: 2em;
+  width: 2em;
+  margin-top: -6px;
+  margin-right: -3px;
   transform: translateY(10%) rotate(-15deg);
 }
 

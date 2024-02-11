@@ -1,6 +1,7 @@
-import Barcode from '../../../../components/Barcode';
+import Barcode from "../../../../components/Barcode"
+import ImageWithFixedSize from "../../../../components/ImageWithFixedSize"
 
-import classes from './card.module.css';
+import classes from "./card.module.css"
 
 const Card = ({ item }) => {
   return (
@@ -9,7 +10,8 @@ const Card = ({ item }) => {
 
       <div className={classes.cardContent}>
         <div className={classes.cardImg}>
-          <img src={item.imgUrl} alt={item.name} />
+          <ImageWithFixedSize src={item.imgUrl} width={40} height={40} />
+          {/* <img src={item.imgUrl} alt={item.name} width="40" height="40" /> */}
         </div>
 
         <section className="barcode">
@@ -17,7 +19,7 @@ const Card = ({ item }) => {
         </section>
       </div>
     </article>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

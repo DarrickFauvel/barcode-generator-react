@@ -29,8 +29,8 @@ dependencies:
 
 devDependencies:
   '@iconify-icon/react':
-    specifier: ^1.0.8
-    version: 1.0.8(react@18.2.0)
+    specifier: ^2.0.0
+    version: 2.0.0(react@18.2.0)
   '@types/react':
     specifier: ^18.0.24
     version: 18.0.25
@@ -502,12 +502,12 @@ packages:
     dev: true
     optional: true
 
-  /@iconify-icon/react@1.0.8(react@18.2.0):
-    resolution: {integrity: sha512-T8Hzz0cQ+08hboS1KFt5t/lBxwpZZuMNVxld2O7vfarPd6mZt9DRRQiM5RIYfB6hxVNddDuzyxbqqfGcMU27pA==}
+  /@iconify-icon/react@2.0.0(react@18.2.0):
+    resolution: {integrity: sha512-DCBO5OxWsTHbcnMak1cuUAVp6jxsAATTGjmky6n1poB60qnaRi7d3ESv6QovYYQ39kNTgorhNTTqWTUok/FOFA==}
     peerDependencies:
       react: '>=16'
     dependencies:
-      iconify-icon: 1.0.8
+      iconify-icon: 2.0.0
       react: 18.2.0
     dev: true
 
@@ -1208,8 +1208,8 @@ packages:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
     dev: true
 
-  /iconify-icon@1.0.8:
-    resolution: {integrity: sha512-jvbUKHXf8EnGGArmhlP2IG8VqQLFFyTvTqb9LVL2TKTh7/eCCD1o2HHE9thpbJJb6B8hzhcFb6rOKhvo7reNKA==}
+  /iconify-icon@2.0.0:
+    resolution: {integrity: sha512-38ArOkxmyD9oDbJBkxaFpE6eZ0K3F9Sk+3x4mWGfjMJaxi3EKrix9Du4iWhgBFT3imKC4FJJE34ur2Rc7Xm+Uw==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

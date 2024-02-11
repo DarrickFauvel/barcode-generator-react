@@ -8,16 +8,16 @@ export const menuItems = atom([
   {
     name: "Barcode Generator",
     route: "generator",
-    icon: "barcode.svg",
+    icon: "material-symbols-light:barcode-scanner",
   },
   {
     name: "Produce Codes",
     route: "produce",
-    icon: "fruits.svg",
+    icon: "healthicons:fruits-outline",
   },
   {
     name: "About redTool",
     route: "about",
-    icon: "info.svg",
+    icon: "material-symbols-light:info-outline",
   },
 ])
