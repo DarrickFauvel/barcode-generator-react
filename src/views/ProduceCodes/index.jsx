@@ -11,6 +11,7 @@ import getProduceData from "../../helpers/getProduceData"
 import PageTitle from "../../components/PageTitle"
 import Card from "./components/Card"
 import BackLink from "../../components/BackLink"
+import ImageWithFixedSize from "../../components/ImageWithFixedSize"
 
 const title = "Produce Codes"
 
@@ -44,7 +45,8 @@ const ProduceCodes = () => {
           })
           .map((item) => (
             <li key={item.name} onClick={handleClick} data-item-upc={item.upc}>
-              <img src={item.imgUrl} alt={item.name} />
+              <ImageWithFixedSize src={item.imgUrl} width={40} height={40} />
+              {/* <img src={item.imgUrl} alt={item.name} /> */}
               {item.name}
             </li>
           ))}

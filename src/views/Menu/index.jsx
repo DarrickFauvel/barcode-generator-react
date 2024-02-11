@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { Icon } from "@iconify-icon/react"
 import { useStore } from "@nanostores/react"
 import { activeMenuItemHighlight, menuItems } from "../../stores/menuStore"
 
@@ -7,6 +8,7 @@ import { Link } from "react-router-dom"
 
 import classes from "./menu.module.css"
 import Qrcode from "../../components/Qrcode"
+import ImageWithFixedSize from "../../components/ImageWithFixedSize"
 
 const Menu = () => {
   const $menuItems = useStore(menuItems)
@@ -27,7 +29,8 @@ const Menu = () => {
           {menuItemsWithoutAbout.map((item) => (
             <li key={item.name}>
               <Link to={item.route}>
-                <img src={`/icons/${item.icon}`} alt="" />
+                <Icon icon={item.icon} width={60} />
+                {/* <img src={`/icons/${item.icon}`} alt="" /> */}
                 {item.name}
               </Link>
             </li>

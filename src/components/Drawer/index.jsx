@@ -9,6 +9,7 @@ import {
 import useOnClickOutside from "../../hooks/useOnClickOutside"
 
 import classes from "./drawer.module.css"
+import { Icon } from "@iconify-icon/react"
 
 const MenuFlyout = () => {
   const drawerRef = useRef()
@@ -23,13 +24,19 @@ const MenuFlyout = () => {
       ref={drawerRef}
       className={`${classes.drawer} ${$isMenuOpen && `${classes.open}`}`}>
       <div className={classes.drawerHeader}>
-        <img
+        <Icon
+          className={classes.close}
+          icon={"ep:close-bold"}
+          height={40}
+          onClick={() => isMenuOpen.set(false)}
+        />
+        {/* <img
           className={classes.close}
           src="/icons/close.svg"
           height={20}
           alt=""
           onClick={() => isMenuOpen.set(false)}
-        />
+        /> */}
       </div>
 
       <div className={classes.menuBody}>
@@ -44,7 +51,8 @@ const MenuFlyout = () => {
                     ? `${classes.active}`
                     : ""
                 }>
-                <img src={`/icons/${item.icon}`} alt="" />
+                <Icon icon={item.icon} width={40} />
+                {/* <img src={`/icons/${item.icon}`} alt="" /> */}
                 {item.name}
               </Link>
             </li>
